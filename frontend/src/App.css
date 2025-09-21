@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
-}
+/* Layout and main container styles for App component */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
+  height: 5rem;
+  text-align: center;
+  min-height: 100vh;
+  /* Main app container: vertical flex, fills viewport */
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 5rem;
+  background-color: var(--card-bg-one);
+/* Header: horizontal flex, fixed height, uses theme card color */
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-color: var(--card-bg-two);
+  color: var(--card-fg-two);
+/* Navigation bar: stretches across header, centers nav items */
 }
 
-.App-link {
-  color: #61dafb;
+.nav-btn {
+  display: flex;
+  flex: 1;  /* share space evenly */
+  text-align: center;  
+  background-color: var(--card-bg-three);
+  color: var(--card-fg-three);
+/* Navigation button: flex child, evenly spaced, themed colors */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-bg);
+  color: var(--color);
+/* Main content: fills remaining space, centers content, themed colors */
 }
+
