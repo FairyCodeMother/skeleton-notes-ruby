@@ -1,8 +1,201 @@
+/* Based on my GinasaurusRx boilerplate */
+/* Use lower-kebab-case */
+
+/* Fonts: Sora, Inter, Josefin Sans, and Federo */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Federo&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+
+/* ============ CSS Reset ============ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* ============ Color  ============ */
+
+
+:root {
+  /* Base colors */
+  /* --color: #722f37; */
+  /* --color-bg: #d2c1c1; */
+  /* --color-fg: #2e4b31; */
+  /* --color: #e97451; */
+  /* --color-bg: #2e4b31; */
+  /* --color-fg: #fff; */
+  --color: #ff7e6b;
+  --color-bg: #fff8f0;
+  --color-fg: #2a3d45;
+
+  /* Headings */
+  /* --h1-color: #722f37; */
+  /* --h2-color: #2e4b31; */
+  /* --h3-color: #4a1f1c; */
+  /* --h4-color: #e97451; */
+  /* --h1-color: #e97451; */
+  /* --h2-color: #722f37; */
+  /* --h3-color: #36454f; */
+  /* --h4-color: #4a1f1c; */
+  --h1-color: #ff7e6b;
+  --h2-color: #ffd700;
+  --h3-color: #3eb489;
+  --h4-color: #a9746e;
+
+  /* Cards */
+  /* --card-bg-one: #e97451; */
+  /* --card-bg-two: #2e4b31; */
+  /* --card-bg-three: #36454f; */
+  /* --card-fg-one: #fff; */
+  /* --card-fg-two: #2e4b31; */
+  /* --card-fg-three: #722f37; */
+  /* --card-bg-one: #36454f; */
+  /* --card-bg-two: #4a1f1c; */
+  /* --card-bg-three: #2e4b31; */
+  /* --card-fg-one: #e97451; */
+  /* --card-fg-two: #fff; */
+  /* --card-fg-three: #e97451; */
+  --card-bg-one: #ffe5b4;
+  --card-bg-two: #ffbfae;
+  --card-bg-three: #fff8f0;
+  --card-fg-one: #2a3d45;
+  --card-fg-two: #3eb489;
+  --card-fg-three: #a9746e;
+
+  /* Pills */
+  /* --pill-bg-one: #4a1f1c; */
+  /* --pill-bg-two: #e97451; */
+  /* --pill-bg-three: #2e4b31; */
+  /* --pill-fg-one: #fff; */
+  /* --pill-fg-two: #722f37; */
+  /* --pill-fg-three: #36454f; */
+  /* --pill-bg-one: #2e4b31; */
+  /* --pill-bg-two: #722f37; */
+  /* --pill-bg-three: #36454f; */
+  /* --pill-fg-one: #e97451; */
+  /* --pill-fg-two: #fff; */
+  /* --pill-fg-three: #2e4b31; */
+  --pill-bg-one: #ffbfae;
+  --pill-bg-two: #ffd700;
+  --pill-bg-three: #3eb489;
+  --pill-fg-one: #2a3d45;
+  --pill-fg-two: #fff8f0;
+  --pill-fg-three: #a9746e;
+
+  /* Accents */
+  /* --accent-one: #e97451; */
+  /* --accent-two: #722f37; */
+  /* --accent-three: #2e4b31; */
+  /* --accent-one: #722f37; */
+  /* --accent-two: #e97451; */
+  /* --accent-three: #36454f; */
+  --accent-one: #ffd700;
+  --accent-two: #ff7e6b;
+  --accent-three: #3eb489;
+
+  /* Muted */
+  /* --muted-one: #f5e9e7; */
+  /* --muted-two: #e0d6d3; */
+  /* --muted-three: #cfcfcf; */
+  /* --muted-one: #222; */
+  /* --muted-two: #333; */
+  /* --muted-three: #444; */
+  --muted-one: #ffe5b4;
+  --muted-two: #a9746e;
+  --muted-three: #fff8f0;
+}
+
+
+
+[data-theme="dark"] {
+  /* Base colors */
+  --color: #ffd700;
+  --color-bg: #2a3d45;
+  --color-fg: #ffe5b4;
+
+  /* Headings */
+  --h1-color: #ffd700;
+  --h2-color: #ff7e6b;
+  --h3-color: #ffbfae;
+  --h4-color: #3eb489;
+
+  /* Cards */
+  --card-bg-one: #3eb489;
+  --card-bg-two: #2a3d45;
+  --card-bg-three: #a9746e;
+  --card-fg-one: #ffd700;
+  --card-fg-two: #ffbfae;
+  --card-fg-three: #fff8f0;
+
+  /* Pills */
+  --pill-bg-one: #2a3d45;
+  --pill-bg-two: #ff7e6b;
+  --pill-bg-three: #a9746e;
+  --pill-fg-one: #ffd700;
+  --pill-fg-two: #fff8f0;
+  --pill-fg-three: #3eb489;
+
+  /* Accent */
+  --accent-one: #ff7e6b;
+  --accent-two: #ffd700;
+  --accent-three: #ffbfae;
+
+  /* Muted */
+  --muted-one: #a9746e;
+  --muted-two: #3eb489;
+  --muted-three: #2a3d45;
+}
+
+
+/* ============ Global Styles  ============ */
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Sora', 'Josefin Sans', 'Federo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

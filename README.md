@@ -22,14 +22,47 @@ npm start
 
 
 
-
-
-
 ```
 
+Structure
+```
+> tree -L 2
+.
+├── backend
+│   ├── app
+│   ├── bin
+│   ├── config
+│   ├── config.ru
+│   ├── db
+│   ├── Dockerfile
+│   ├── Gemfile
+│   ├── Gemfile.lock
+│   ├── lib
+│   ├── log
+│   ├── public
+│   ├── Rakefile
+│   ├── README.md
+│   ├── script
+│   ├── storage
+│   ├── test
+│   ├── tmp
+│   └── vendor
+├── frontend
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   ├── README.md
+│   └── src
+├── README.md
+└── z-notes
+    ├── hello_world.rb
+    ├── rattleship.rb
+    ├── README.md
+    ├── simple_calculator.rb
+    ├── string_manipulation.rb
+    ├── syntax_notes.md
+    └── token_mgt.md
 
-#722f37	(114,47,55)
-#2e4b31	(46,75,49)
-#4a1f1c	(74,31,28)
-#e97451	(233,116,81)
-#36454f	(54,69,79)
+19 directories, 17 files
+```
